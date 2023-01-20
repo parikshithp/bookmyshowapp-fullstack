@@ -5,6 +5,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.bookmyshow.Dto.TheatreDto;
+import com.bookmyshow.model.ShowDetails;
 import com.bookmyshow.model.TheatreEntity;
 import com.bookmyshow.repository.TheatreRepository;
 import com.bookmyshow.service.TheatreService;
@@ -28,7 +30,7 @@ public class TheatreServiceImpl implements TheatreService{
 		}
 		
 		@Override
-		public List<TheatreEntity> getByMovieId(int movieId) {
+		public List<ShowDetails> getByMovieId(int movieId) {
 			return theatrerepository.findByMovieId(movieId);
 			
 		}
